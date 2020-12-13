@@ -1,0 +1,185 @@
+.header {
+  position: relative;
+  z-index: 50;
+  @media (max-width: $md3+px) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+  }
+
+  &__body {
+    height: 100px;
+    @include flexbox();
+    justify-content: space-between;
+    align-items: center;
+    @media (max-width: $md2+px) {
+      height: 70px;
+    }
+    @media (max-width: $md3+px) {
+      height: 50px;
+    }
+  }
+
+  &__column {
+  }
+
+  &__logo {
+    display: inline-block;
+    width: 172px;
+    position: relative;
+    z-index: 20;
+    img {
+      max-width: 100%;
+    }
+    @media (max-width: $md2+px) {
+      width: 140px;
+    }
+  }
+}
+.menu-header {
+  &__icon {
+    display: none;
+    position: relative;
+    width: 30px;
+    height: 18px;
+    cursor: pointer;
+    z-index: 25;
+    span {
+      @include anim(0.3s, 0s);
+      top: 8px;
+      left: 0px;
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background-color: #007397;
+      &:first-child {
+        top: 0px;
+      }
+      &:last-child {
+        top: auto;
+        bottom: 0px;
+      }
+    }
+    &.active {
+      span {
+        @include scale(0);
+        &:first-child {
+          @include rotate(-45deg);
+          top: 8px;
+        }
+        &:last-child {
+          @include rotate(45deg);
+          bottom: 8px;
+        }
+      }
+    }
+    @media (max-width: $md3+px) {
+      display: block;
+    }
+  }
+
+  &__menu {
+    @media (max-width: $md3+px) {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: -110%;
+      background-color: white;
+      z-index: 15;
+      padding: 60px 10px 20px 10px;
+      overflow: auto;
+      @include anim(0.4s, 0s);
+      &.active {
+        left: 0;
+      }
+    }
+  }
+
+  &__list,
+  &__link--earth {
+    @include flexbox();
+    align-items: center;
+  }
+  &__list {
+    li {
+      margin: 0 0 0 35px;
+      @media (max-width: $md1+px) {
+        margin: 0 0 0 25px;
+      }
+      @media (max-width: $md2+px) {
+        margin: 0 0 0 14px;
+      }
+      @media (max-width: $md3+px) {
+        margin: 0;
+        padding: 0 0 20px 0;
+        &:last-child {
+          padding: 0 0 0px 0;
+        }
+      }
+    }
+    @media (max-width: $md3+px) {
+      display: block;
+    }
+  }
+
+  &__link {
+    color: #646667;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    @include anim(0.4s, 0s);
+    position: relative;
+    &--earth {
+      span:last-child {
+        margin: 0 0 0 17px;
+        @media (max-width: $md1+px) {
+          margin: 0 0 0 14px;
+        }
+        @media (max-width: $md2+px) {
+          margin: 0 0 0 8px;
+          img {
+            max-width: 20px;
+          }
+        }
+        @media (max-width: $md3+px) {
+          margin: 0 0 0 10px;
+          img {
+            max-width: 14px;
+          }
+        }
+      }
+    }
+    span {
+      position: relative;
+      &:after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: -2px;
+        width: 0;
+        height: 1px;
+        background-color: #007397;
+        @include anim(0.4s, 0s);
+      }
+    }
+    &:hover {
+      color: #007397;
+      span:first-child {
+        &:after {
+          left: 0;
+          width: 100%;
+        }
+      }
+    }
+    @media (max-width: $md2+px) {
+      font-size: 11px;
+    }
+    @media (max-width: $md3+px) {
+      font-size: 14px;
+    }
+  }
+}

@@ -1,0 +1,43 @@
+.footer {
+  &__body {
+    height: 125px;
+    @include flexbox();
+    justify-content: space-between;
+    align-items: center;
+    @media (max-width: 600px) {
+      display: block;
+      text-align: center;
+      height: auto;
+      padding: 20px 0;
+    }
+  }
+
+  &__column {
+    color: #646667;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 17px;
+    &:last-child {
+      a {
+        @media (max-width: 600px) {
+          margin: 0 0 0 0px;
+          padding: 0 10px;
+        }
+      }
+    }
+  }
+
+  &__copy {
+  }
+
+  &__link {
+    color: #646667;
+    margin: 0 0 0 30px;
+    display: inline-block;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

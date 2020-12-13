@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="24px" height="29px" viewbox="0 0 24 29" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+  <g id="Map-Marker-Copy-4">
+    <path d="M12 29C12 29 24 18.6274 24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 18.6274 12 29 12 29Z" id="Oval-4" fill="#007397" fill-rule="evenodd" stroke="none" />
+    <path d="M2.73646 0L2.24263 1.41696L4.23783 6.17739L0.617416 6.17739L0 7.95382L4.98367 7.95382L5.84291 10L8.19026 10L3.99091 0L2.73646 0Z" transform="translate(8 6)" id="Fill-2" fill="#FFFFFF" fill-rule="evenodd" stroke="none" />
+  </g>
+</svg>
