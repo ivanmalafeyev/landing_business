@@ -522,7 +522,7 @@ textarea {
   display: block;
   &:focus {
   }
-  &:err {
+  &.err {
     //
     border-color: red;
     //
