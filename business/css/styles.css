@@ -626,7 +626,7 @@ textarea {
   display: block;
 }
 
-.input:err {
+.input.err {
   border-color: red;
 }
 
