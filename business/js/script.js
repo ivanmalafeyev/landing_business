@@ -132,3 +132,28 @@ function initMap(n) {
 
 initMap();
 ;
+var filter = document.querySelectorAll(".tab__navitem");
+[].forEach.call(filter, function (e) {
+  e.addEventListener("click", function () {
+    var i = e.getAttribute("data-filter");
+
+    if (i == "1") {
+      [].forEach.call(document.querySelectorAll(".item-newsmedia__column"), function (el) {
+        el.style.display = "block";
+      });
+    } else {
+      [].forEach.call(document.querySelectorAll(".item-newsmedia__column"), function (el) {
+        el.style.display = "none";
+      });
+      [].forEach.call(document.querySelectorAll(".item-newsmedia__column.f_" + i), function (el) {
+        el.style.display = "block";
+      });
+    }
+
+    [].forEach.call(filter, function (elem) {
+      elem.classList.remove("active");
+    });
+    e.classList.add("active");
+  });
+});
+;

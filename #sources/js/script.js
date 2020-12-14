@@ -6,3 +6,4 @@
 @@include("ibg.js");
 @@include("responsive.js");
 @@include("map.js");
+@@include("filter.js");
